@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-box {
+            width: 400px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .form-box h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .input-box {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .input-box i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 10px 10px 10px 30px;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid white;
+            outline: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        .input-box input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 17px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .group span a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .group span a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <form action="" name="LoginForm" id="loginForm">
+                <h2>Login</h2>
+                <div class="input-box">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="Username" id="username" placeholder="Username">
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="Password" id="password" placeholder="Password">
+                </div>
+                <div class="button">
+                    <input type="submit" class="btn" value="Login">
+                </div>
+                <div class="group">
+                    <span><a href="Forgot password.html">Forgot Password</a></span>
+                    <span><a href="register.html">Register</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Logging in with Username: ' + document.getElementById('username').value);
+        });
+    </script>
+</body>
+</html>
